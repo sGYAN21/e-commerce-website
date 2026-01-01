@@ -8,8 +8,7 @@ import Typography from '@mui/material/Typography';
 import { Box, IconButton, Rating } from '@mui/material';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import { Router, useRouter } from 'next/router';
-const router = useRouter();
+
 import Link from 'next/link';
 interface CardItemProps {
   id:number;

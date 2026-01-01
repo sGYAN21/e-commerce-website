@@ -10,16 +10,10 @@ import useFavorites from "@/hooks/useFavorites";
 import useSnackbar from "@/hooks/useSnackbar";
 
 export default function HomeProduct({ products }: { products: any[] }) {
-  // const [products, setProducts] = useState<any[]>([]);
+
   const { open, message, severity, showSnackbar, closeSnackbar } = useSnackbar();
   const { favorites, toggleFavorite } = useFavorites(showSnackbar);
-  // useEffect(() => {
-  //   (async () => {
-  //     const data = await fetchProducts();
-  //     setProducts(data);
-  //   })();
-  // },);
-   // const products = await fetchProducts()
+
     const handleAddedToCart =(id:number, title:string)=>{
       showSnackbar(`${title} added to cart!`,"success");
     };
