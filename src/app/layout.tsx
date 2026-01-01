@@ -1,6 +1,16 @@
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+// 1. Import the Theme Context Provider
+// import { ThemeContextProvider } from "@/ThemeContext"; // Adjust path if necessary!
+
+import NavBar from "@/components/NavBar";
+import Footer from "@/components/Footer";
+import ThemeContext from "@/ThemeContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,7 +35,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+        {/* 2. Wrap the application content with the ThemeContextProvider */}
+        {/* <ThemeContext> */}
+          <NavBar />
+          {children}
+          <Footer />
+        {/* </ThemeContext> */}
       </body>
     </html>
   );

@@ -1,0 +1,17 @@
+.brand-img {
+  object-fit: contain;
+  transition: 0.3s;
+   @media(max-width:650px){
+    width: 70;
+    height: 70;
+  }
+
+   @media(max-width:550px){
+    width: 55;
+    height: 55;
+  }
+}
+
+.brand-img-box:hover .brand-img {
+  transform: scale(1.1);
+}
