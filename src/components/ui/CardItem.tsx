@@ -33,6 +33,9 @@ const CardItem: React.FC<CardItemProps> = ({id, thumbnail, title, rating, descri
       cursor: 'pointer', 
        boxShadow: "0 4px 20px rgba(0,0,0,0.08)",
         transition: "all 0.9s ease",
+        display: 'flex',
+      flexDirection: 'column',
+      height: '100%',
         "&:hover": {
           transform: "scale(1.06)",
           boxShadow: "0 6px 26px rgba(0,0,0,0.12)",
@@ -102,10 +105,11 @@ const CardItem: React.FC<CardItemProps> = ({id, thumbnail, title, rating, descri
             backgroundColor: 'black',
           },
         }}>Buy Now</Button>
+        
 
       </CardActions>
     </Card>
-    </Link>
+     </Link>
   );
 }
 export default CardItem;

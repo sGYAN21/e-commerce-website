@@ -1,11 +1,6 @@
 'use client'
-import BannerSlider from './BannerSlider'
-import Brands from './Brands'
 import CardItem from '@/components/ui/CardItem'
-import DetailCard from './DetailCard'
-import { fetchProducts } from '@/utils/api'
 import { Alert, Box, Snackbar } from '@mui/material'
-import React, { useEffect, useState } from 'react'
 import useFavorites from "@/hooks/useFavorites";
 import useSnackbar from "@/hooks/useSnackbar";
 
