@@ -29,7 +29,7 @@ export default function CategoryPage() {
     showSnackbar(`${title} added to cart!`, "success");
   };
   return (
-    <Box>
+    <Box sx={{mt:10}}>
       <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, justifyContent: 'center', alignContent: 'center', }}>
         {products.map((item) => (
           <CardItem

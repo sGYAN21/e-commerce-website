@@ -226,6 +226,7 @@ const BannerSlider = () => {
 
   return (
     <Box sx={{ 
+      mt:8,
       position: "relative", 
       width: "100%", 
       height: { xs: 300, sm: 400, md: 500 },

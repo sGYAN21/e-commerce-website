@@ -13,8 +13,8 @@ export default function HomeProduct({ products }: { products: any[] }) {
       showSnackbar(`${title} added to cart!`,"success");
     };
   return (
-    <Box>
-      <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, justifyContent: 'center', alignContent: 'center', }}>
+    <Box sx={{mt:5 ,mb:5}}>
+      <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 3, justifyContent: 'center', alignContent: 'center',}}>
         {products.map((item) => (
           <CardItem
             key={item.id}
@@ -27,6 +27,7 @@ export default function HomeProduct({ products }: { products: any[] }) {
             isFavorite={!!favorites[item.id]}
             onToggleFavorite={toggleFavorite}
             onAddToCart={handleAddedToCart}
+
           />
         ))}
       </Box>

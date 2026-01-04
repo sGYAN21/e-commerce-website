@@ -122,7 +122,7 @@ export default function SignUp(props: { disableCustomTheme?: boolean }) {
     <ThemeContext {...props}>
       <CssBaseline enableColorScheme />
       <SignUpContainer direction="column" justifyContent="space-between" sx={{mt:(-8)}}>
-        <Card variant="outlined">
+        <Card variant="outlined" sx={{mt:15}}>
           <Typography
             component="h1"
             variant="h4"

@@ -43,7 +43,7 @@ function NavBar() {
     setAnchorElUser(null);
   };
   return (
-    <AppBar position="static" sx={{ bgcolor: "#001F3F" }} >
+    <AppBar position="fixed" sx={{ bgcolor: "#001F3F" }} >
       <Container maxWidth="xl">
         <Toolbar disableGutters >
           <Box sx={{ flexGrow: 0 }}>

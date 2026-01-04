@@ -37,7 +37,7 @@ const CardItem: React.FC<CardItemProps> = ({id, thumbnail, title, rating, descri
       flexDirection: 'column',
       height: '100%',
         "&:hover": {
-          transform: "scale(1.06)",
+          transform: "scale(1.03)",
           boxShadow: "0 6px 26px rgba(0,0,0,0.12)",
             backgroundColor: '#E1E2E4'
         },
