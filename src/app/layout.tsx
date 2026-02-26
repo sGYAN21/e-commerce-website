@@ -5,6 +5,7 @@ import "./globals.css";
 
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
+import { Box, Toolbar } from "@mui/material";
 
 
 const geistSans = Geist({
@@ -29,12 +30,31 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${geistSans.variable} ${geistMono.variable}`}
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          minHeight: '100vh',
+          margin: 0
+        }}
+      >
         {/* 2. Wrap the application content with the ThemeContextProvider */}
         {/* <ThemeContext> */}
-          <NavBar />
+        <NavBar />
+        <Toolbar />
+
+        {/* 3. Main Content Area */}
+        <Box
+          component="main"
+          sx={{
+            flex: 1,
+            display: 'flex',
+            flexDirection: 'column'
+          }}
+        >
           {children}
-          <Footer />
+        </Box>
+        <Footer />
         {/* </ThemeContext> */}
       </body>
     </html>

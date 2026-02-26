@@ -145,7 +145,7 @@ const Footer: React.FC = () => {
       <Divider sx={{ my: 2, borderColor: 'grey.800' }} />
       <Box sx={{ textAlign: 'center', color: 'grey.600' }}>
         <Typography variant="body2">
-          © Copyright GYAN SAGAR 2025. All right reserved
+          © Copyright GYAN SAGAR 2026. All right reserved
         </Typography>
       </Box>
     </Box>

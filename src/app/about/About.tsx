@@ -30,7 +30,7 @@ export default function AboutPage() {
             {/* ======= HEADER SECTION ======= */}
             <Box sx={{ textAlign: "center", py: 8, bgcolor: "#f8f9fa", mt: 5 }}>
                 <Container maxWidth="md">
-                    <Typography variant="h3" fontWeight={700} gutterBottom>
+                    <Typography variant="h3" fontWeight={700} gutterBottom color="text.primary">
                         About Us
                     </Typography>
                     <Typography variant="body1" color="text.secondary">
@@ -43,7 +43,7 @@ export default function AboutPage() {
             <Container maxWidth="lg" sx={{ py: 10 }}>
                 <Grid container spacing={4} alignItems="center">
                     <Grid >
-                        <Typography variant="h4" fontWeight={700} lineHeight={1.3}>
+                        <Typography variant="h4" fontWeight={700} lineHeight={1.3} color="text.secondary">
                             You guessed it. We’re changing the game.
                         </Typography>
                     </Grid>
@@ -64,7 +64,7 @@ export default function AboutPage() {
 
             {/* ======= LEADERSHIP TEAM ======= */}
             <Container maxWidth="lg" sx={{ py: 8, textAlign: "center" }}>
-                <Typography variant="h4" fontWeight={700} mb={2}>
+                <Typography variant="h4" fontWeight={700} mb={2} color="text.secondary">
                     Our Leadership Team
                 </Typography>
                 <Typography variant="body1" color="text.secondary" sx={{ maxWidth: 700, mx: "auto", mb: 8 }}>
@@ -85,7 +85,7 @@ export default function AboutPage() {
                                         boxShadow: "0px 10px 20px rgba(0,0,0,0.1)"
                                     }}
                                 />
-                                <Typography variant="h6" fontWeight={700}>
+                                <Typography variant="h6" fontWeight={700} color="text.secondary">
                                     {member.name}
                                 </Typography>
                                 <Typography variant="body2" color="text.secondary">
@@ -119,7 +119,7 @@ export default function AboutPage() {
                             justifyContent: "center"
                         }}
                     >
-                        <Typography variant="h4" fontWeight={700} mb={3}>
+                        <Typography variant="h4" fontWeight={700} mb={3} color="text.secondary">
                             Join a global team of change-makers.
                         </Typography>
                         <Typography variant="body1" color="text.secondary" mb={4}>

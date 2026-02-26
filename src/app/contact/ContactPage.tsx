@@ -18,10 +18,10 @@ import { Mail, Phone, LocationOn, Language } from "@mui/icons-material";
 
 export default function ContactPage() {
   return (
-    <Box sx={{ width: "100%", overflowX: "hidden", bgcolor: "#fff",mt:10, pb: 10 }}>
+    <Box sx={{ width: "100%", overflowX: "hidden", bgcolor: "#fff",pb: 10 }}>
       {/* ======= HEADER ======= */}
       <Box textAlign="center" py={6}>
-        <Typography variant="h3" fontWeight={700} sx={{ fontSize: { xs: "2rem", md: "3rem" } }}>
+        <Typography variant="h3" color="text.primary" fontWeight={700} sx={{ fontSize: { xs: "2rem", md: "3rem" } }}>
           Contact Us
         </Typography>
         <Typography variant="body1" color="text.secondary" mt={1}>
@@ -111,11 +111,11 @@ export default function ContactPage() {
               </Grid>
 
               <Grid>
-                <Typography fontWeight={700} mt={2} mb={1}>
+                <Typography fontWeight={700} mt={2} mb={1} color="text.secondary">
                   What Product do you need?
                 </Typography>
-                <RadioGroup row sx={{ gap: 1 }}>
-                  <FormControlLabel value="macbook" control={<Radio size="small" />} label="Macbook Pro" />
+                <RadioGroup row sx={{ gap: 1 }} >
+                  <FormControlLabel value="macbook" color="text.secondary"control={<Radio size="small" />} label="Macbook Pro" />
                   <FormControlLabel value="smartphone" control={<Radio size="small" />} label="Smartphone" />
                   <FormControlLabel value="smartwatch" control={<Radio size="small" />} label="Smartwatch" />
                   <FormControlLabel value="clothing" control={<Radio size="small" />} label="Clothing" />
@@ -150,7 +150,7 @@ export default function ContactPage() {
 
       {/* ======= SEE OUR WORK ======= */}
       <Box textAlign="center" mt={12} mb={6}>
-        <Typography variant="h4" fontWeight={700}>
+        <Typography variant="h4" fontWeight={700} color="text.primary">
           See Our Work
         </Typography>
         <Typography sx={{ maxWidth: "700px", mx: "auto", mt: 2, color: "text.secondary", px: 2 }}>
@@ -209,7 +209,7 @@ export default function ContactPage() {
             }}
           >
             <Box textAlign={{ xs: "center", md: "left" }}>
-              <Typography variant="h5" fontWeight={700}>
+              <Typography variant="h5" fontWeight={700} color="text.secondary">
                 Subscribe our Newsletter
               </Typography>
               <Typography color="text.secondary">

@@ -26,6 +26,23 @@ const CardItem: React.FC<CardItemProps> = ({id, thumbnail, title, rating, descri
   //     const handleClick = () => {
   //   router.push(`/${id}`);
   // };
+  const handleFavoriteClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation(); 
+    onToggleFavorite(id);
+  };
+
+  const handleAddToCartClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    onAddToCart(id, title);
+  };
+
+  const handleBuyNowClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+
+  };
   return (
     <Link href={`/product/${id}`} style={{ textDecoration: "none" }}>
     <Card elevation={10} sx={{
@@ -53,7 +70,8 @@ const CardItem: React.FC<CardItemProps> = ({id, thumbnail, title, rating, descri
     }}>
       <Box sx={{ position: 'relative' }}>
         <IconButton
-          onClick={() => onToggleFavorite(id)}
+          // onClick={() => onToggleFavorite(id)}
+          onClick={handleFavoriteClick}
           sx={{ position: 'absolute', top: 8, right: 8, zIndex: 1, p: 0, ml: 3, }}>
           {isFavorite ? (
             <FavoriteIcon sx={{ color: '#001F3F', fontSize: 35 }} />
@@ -91,7 +109,8 @@ const CardItem: React.FC<CardItemProps> = ({id, thumbnail, title, rating, descri
       </CardContent>
       <CardActions sx={{ justifyContent: 'space-between' }}>
         <Button 
-        onClick={() => onAddToCart(id, title)}
+        // onClick={() => onAddToCart(id, title)}
+        onClick={handleAddToCartClick}
         size="medium" variant='contained' sx={{
           backgroundColor: '#001F3F', borderRadius: 5, color: 'white', '&:hover': {
             backgroundColor: 'black',
@@ -100,7 +119,9 @@ const CardItem: React.FC<CardItemProps> = ({id, thumbnail, title, rating, descri
         <Typography variant='h5' sx={{ fontWeight: 800, fontSize: 25 }}>
           $ {price}
         </Typography>
-        <Button size="medium" variant='contained' sx={{
+        <Button 
+        onClick={handleBuyNowClick}
+        size="medium" variant='contained' sx={{
           backgroundColor: '#001F3F', borderRadius: 5, color: 'white', '&:hover': {
             backgroundColor: 'black',
           },

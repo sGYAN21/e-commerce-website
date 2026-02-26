@@ -170,7 +170,7 @@ export const getDesignTokens = (mode: PaletteMode) => {
       },
       text: {
         primary: gray[800],
-        secondary: gray[600],
+        secondary: gray[200],
         warning: orange[400],
         ...(mode === 'dark' && { primary: 'hsl(0, 0%, 100%)', secondary: gray[400] }),
       },
@@ -243,10 +243,11 @@ export const colorSchemes = {
   light: {
     palette: {
       primary: {
+        contrastText: '#ffffff',
         light: brand[200],
         main: brand[400],
         dark: brand[700],
-        contrastText: brand[50],
+        // contrastText: brand[50],
       },
       info: {
         light: brand[100],

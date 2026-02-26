@@ -82,15 +82,20 @@ export default function DetailCard() {
             }}
             >
             <IconContainer>
-              <SvgIcon component={feature.icon} sx={{
+              <SvgIcon 
+              component={feature.icon} 
+              sx={{
+                color:'#001F3F',
+            
                 fontSize: 50,
                 '@media (max-width: 600px)': {
                   fontSize: 35,
+                  
                 }
               }} />
             </IconContainer>
 
-            <Typography variant="subtitle1" fontWeight="bold" gutterBottom sx={{
+            <Typography variant="subtitle1" fontWeight="bold" color="text.secondary" gutterBottom sx={{
               '@media(max-width: 600px)':{
                 fontSize:14
               }
@@ -98,9 +103,13 @@ export default function DetailCard() {
               {feature.title}
             </Typography>
 
-            <Typography variant="body2" sx={{
+            <Typography variant="body2" 
+            color="text.secondary"
+            
+            sx={{
               '@media(max-width: 600px)':{
-                fontSize:12
+                fontSize:12,
+                
               }
             }}>
               {feature.subtitle}

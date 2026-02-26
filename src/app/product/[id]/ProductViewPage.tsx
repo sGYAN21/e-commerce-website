@@ -32,7 +32,7 @@ export default function ProductViewPage({ product }: { product: any }) {
   const discountPrice = (product.price * (1 - product.discountPercentage / 100)).toFixed(2);
 
   return (
-    <Box sx={{ p: { xs: 2, md: 4 }, maxWidth: 1200, mx: "auto", bgcolor: "white" }}>
+    <Box sx={{ p: { xs: 2, md: 4 }, maxWidth: 1200, mx: "auto", bgcolor: "white", mt:8}}>
       {/* Breadcrumbs */}
       <Typography variant="caption" color="text.secondary" sx={{ mb: 2, display: "block" }}>
         Home / {product.category} / <b>{product.title}</b>

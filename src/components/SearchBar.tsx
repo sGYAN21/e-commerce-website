@@ -12,7 +12,7 @@ const Search = styled('div')(({ theme }) => ({
     '&:hover': {
         backgroundColor: alpha(theme.palette.common.white, 0.25),
     },
-    marginRight: theme.spacing(5),
+    marginRight: theme.spacing(1),
     marginLeft: 0,
     width: '100%',
     [theme.breakpoints.up('sm')]: {
@@ -37,25 +37,34 @@ const SearchIconWrapper = styled('div')(({ theme }) => ({
 }));
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
     color: 'inherit',
+    width: '100%',
     '& .MuiInputBase-input': {
         padding: theme.spacing(1, 1, 1, 0),
-
-        paddingLeft: `calc(1em + ${theme.spacing(3)})`,
-        width: "100%",
-        minWidth: "100px",
+        
+        paddingLeft: `calc(1em + ${theme.spacing(4)})`,
         transition: theme.transitions.create('width'),
+        width: '100%',
 
+        // RESPONSIVE SIZING
+        [theme.breakpoints.down('sm')]: {
+            width: '10ch', 
+            '&:focus': {
+                width: '15ch', 
+            },
+        },
+        [theme.breakpoints.up('sm')]: {
+            width: '20ch',
+        },
         [theme.breakpoints.up('md')]: {
-            width: '320px',
+            width: '35ch',
         },
     },
 }));
-
 export default function SearchBar() {
     const [searchQuery, setSearchQuery] = useState("");
     const router = useRouter();
 
-    
+
     const handleSearchKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
         if (e.key === "Enter" && searchQuery.trim()) {
             router.push(`/search/${searchQuery.trim()}`);

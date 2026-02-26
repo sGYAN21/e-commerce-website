@@ -5,7 +5,7 @@ import { Product, ProductView } from '@/types/type';
 
 export async function fetchProducts(): Promise<ProductView[]> {
   try {
-    const res = await fetch(config.dummyProducts);
+    const res = await fetch(config.dummyProducts || "");
     if (!res.ok) throw new Error("Failed to fetch products");
 
     const data = await res.json();
@@ -44,7 +44,7 @@ export async function fetchCategories(): Promise<any[]>{
 }
 export async function fetchProductById(id: number): Promise<Product | null> {
   try {
-    const res = await fetch(`https://dummyjson.com/products/${id}`);
+    const res = await fetch(`${config.dummyProducts}/${id}`);
 
     if (!res.ok) throw new Error("Failed to fetch product");
 
